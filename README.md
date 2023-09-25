@@ -50,6 +50,15 @@ Just really trying to go about it piece by piece. Get in the habit of building t
 
 ### What I learned
 
+Learned more about border-radius specifically:
+
+`.element {
+  border-bottom-left-radius: 100% 50%;
+  border-bottom-right-radius: 100% 50%;
+  }`
+
+To create the slight curve on the page
+
 Just continuing to improve and build confidence on my HTML, CSS skills while building a site to specific designs
 
 ### Continued development

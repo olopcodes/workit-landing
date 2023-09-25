@@ -49,24 +49,49 @@ header .access-link:hover::after {
   background-color: var(--color-purple-primary);
   color: var(--color-white);
   text-align: center;
+  position: relative;
 }
 
 .banner-img {
-  position: relative;
-  background-color: var(--color-purple-primary);
-  /* border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px; */
-  /* clip-path: circle(68.9% at 47% 21%); */
+  /* position: relative; */
+  position: absolute;
+  background-color: transparent;
+  z-index: 100;
+  transform: translateY(30%);
 }
 
 .banner-img img {
-  transform: translateY(10px);
+  /* transform: translateY(10px); */
+}
+
+.curve::after {
+  z-index: 3;
+  content: "";
+  position: absolute;
+  bottom: -3rem;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background-color: var(--color-purple-primary);
+  border-bottom-left-radius: 100% 50%;
+  border-bottom-right-radius: 100% 50%;
+}
+
+.curve:nth-of-type(2):after {
+  background-color: var(--color-purple-light);
+  border-bottom-left-radius: 100% 40%;
+  border-bottom-right-radius: 100% 40%;
+  height: 10%;
 }
 
 .steps {
   background-color: var(--color-purple-light);
   color: var(--color-purple-medium);
   text-align: center;
+  position: relative;
+  padding-top: 16rem;
+  z-index: 1;
+  /* transform: translateY(5rem); */
 }
 
 .steps h2 {
@@ -95,7 +120,7 @@ header .access-link:hover::after {
 
 .first {
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 6rem;
 }
 
 .first-img {
