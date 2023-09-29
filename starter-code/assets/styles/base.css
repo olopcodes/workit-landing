@@ -38,12 +38,14 @@ html {
 }
 
 body {
+  background-color: var(--color-purple-light);
   min-height: 100vh;
   font-family: var(--font-family);
   display: grid;
   grid-template-rows: auto 1fr auto;
   font-size: var(--font-size-base);
   line-height: var(--reg-line-height);
+  overflow-x: hidden;
 }
 
 img {
@@ -72,7 +74,7 @@ section {
 
 .container {
   width: 90%;
-  max-width: 66.67rem;
+  max-width: 70rem;
   margin: 0 auto;
 }
 
@@ -98,6 +100,14 @@ button {
   color: var(--color-purple-primary);
   font-weight: 700;
   text-transform: capitalize;
+  transition: all 0.356s ease;
+  border: 1.5px solid transparent;
+}
+
+.btn-main:hover {
+  border-color: var(--color-lime);
+  color: var(--color-lime);
+  background-color: transparent;
 }
 
 @media screen and (min-width: 500px) {
@@ -108,5 +118,13 @@ button {
   button {
     padding: 1rem 1.5rem;
     font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 966px) {
+  .page-title {
+    font-size: var(--heading-font-l);
+    line-height: var(--heading-line-height-l);
+    margin-bottom: 4rem;
   }
 }
