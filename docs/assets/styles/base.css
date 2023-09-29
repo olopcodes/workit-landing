@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope&display=swap");
+
+:root {
+  --color-purple-primary: #24053e;
+  --color-purple-medium: #584d62;
+  --color-purple-light: #fcf8ff;
+  --color-white: #fff;
+  --color-lime: #44ffa1;
+
+  --font-family: "Manrope", sans-serif;
+  --font-family-heading: "Fraunces", serif;
+
+  --font-size-base: 100%;
+  --reg-line-height: 32px;
+
+  --heading-font-l: 4.44rem; /*80px*/
+  --heading-line-height-l: 4.44rem;
+
+  --heading-font-m: 3.11rem; /*56px*/
+  --heading-line-height-m: 3.56rem; /*64*/
+
+  --heading-font-s: 1.78rem; /*32px*/
+  --heading-line-height-s: 2.22rem; /*40px*/
+
+  --font-base-sm: calc(var(--font-size-base) / 1.25);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-purple-light);
+  min-height: 100vh;
+  font-family: var(--font-family);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-size: var(--font-size-base);
+  line-height: var(--reg-line-height);
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.page-title {
+  letter-spacing: 1px;
+  line-height: 50px;
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+}
+
+.page-title span {
+  border-bottom: 2px solid var(--color-lime);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 1rem 1.3rem;
+}
+
+.btn-main {
+  background-color: var(--color-lime);
+  color: var(--color-purple-primary);
+  font-weight: 700;
+  text-transform: capitalize;
+  transition: all 0.356s ease;
+  border: 1.5px solid transparent;
+}
+
+.btn-main:hover {
+  border-color: var(--color-lime);
+  color: var(--color-lime);
+  background-color: transparent;
+}
+
+@media screen and (min-width: 500px) {
+  .page-title {
+    font-size: var(--heading-font-m);
+  }
+
+  button {
+    padding: 1rem 1.5rem;
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 966px) {
+  .page-title {
+    font-size: var(--heading-font-l);
+    line-height: var(--heading-line-height-l);
+    margin-bottom: 4rem;
+  }
+}
